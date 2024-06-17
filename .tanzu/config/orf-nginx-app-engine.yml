@@ -1,0 +1,11 @@
+apiVersion: apps.tanzu.vmware.com/v1
+kind: ContainerApp
+metadata:
+  creationTimestamp: null
+  name: orf-nginx-app-engine
+spec:
+  image: docker.io/ogelbric/nginx
+  -  replicas: 4
+  ports:
+  - name: main
+    port: 8080
